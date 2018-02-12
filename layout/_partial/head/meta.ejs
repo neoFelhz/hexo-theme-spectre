@@ -30,11 +30,8 @@
 <meta name="format-detection" content="telephone=no"/>
 <meta name="description" itemprop="description" content="<% if(page.description) { %><%= page.description %><% } else if(page.excerpt){ %><%= strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '') %><% } else if (config.description){ %><%= config.description %><% } %>">
 <meta name="keywords" content="<%= theme.head.keywords %><% if(page.tags && page.tags.each) { page.tags.each(function(tag) { %><%- ',' + tag.name %><% })} %>">
-<meta name="theme-color" content="<%= theme.uiux.android_chrome_color %>">
+<meta name="theme-color" content="<%= theme.color.android_chrome_color %>">
 
 <!-- Disable Fucking Bloody Baidu Tranformation -->
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
