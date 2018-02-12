@@ -1,34 +1,25 @@
 {
-  "name": "hexo-material",
-  "version": "1.5.0",
-  "description": "Material Design Theme for Hexo",
+  "name": "hexo-spectre",
+  "version": "0.0.1",
+  "description": "Elegant Theme for Hexo",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "setup": "npm cache clean && npm install",
     "lint": "npm run setup && bash lint.sh"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viosey/hexo-theme-material.git"
-  },
-  "keywords": [
-    "hexo",
-    "theme",
-    "material"
-  ],
   "author": "Viosey",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/viosey/hexo-theme-material/issues"
+    "url": "https://github.com/neoFelhz/hexo-theme-spectre/issues"
   },
-  "homepage": "https://github.com/viosey/hexo-theme-material#readme",
+  "homepage": "https://github.com/neoFelhz/hexo-theme-spectre#readme",
   "devDependencies": {
     "ejs-lint": "^0.2.0",
     "eslint": "^3.14.0",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.8.0",
+    "gulp-clean-css": "^3.9.2",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
     "sass-lint": "^1.10.2"

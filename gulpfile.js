@@ -4,17 +4,17 @@ let uglify = require('gulp-uglify');
 let rename = require("gulp-rename");
 
 gulp.task('minify-js', () => {
-  return gulp.src('dist/js/**/*.js')
+  return gulp.src('dist/**/*.js')
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('source/js'));
+    .pipe(gulp.dest('source'));
 });
 
 gulp.task('minify-css', () => {
-  return gulp.src('dist/css/**/*.css')
+  return gulp.src('dist/**/*.css')
 	.pipe(rename({suffix: '.min'}))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('source/css'));
+    .pipe(gulp.dest('source'));
 });
 
 gulp.task('default', () => {
