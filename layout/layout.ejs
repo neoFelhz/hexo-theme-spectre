@@ -2,12 +2,17 @@
 
 <html>
     <%- partial('_partial/head') %>
-    <body>
+
+    <body class="mdui-drawer-body-left">
+        <div class="mdui-drawer">
+                <%- partial('_partial/sidebar') %>
+        </div>
         <!-- Main Container -->
         <main>
             <%- body %>
-            <%- partial('_partial/footer') %>
         </main>
+        <%- partial('_partial/footer') %>
         <%- partial('_source/footer') %>
     </body>
+
 </html>
