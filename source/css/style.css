@@ -1,3 +1,7 @@
+body {
+    background: #f8f9fa;
+}
+
 /*============* * Sidebar */
 
 #sidebar-content li {
@@ -42,7 +46,6 @@
 footer {
     padding: 1.2rem;
     color: #9e9e9e;
-    background-color: #fff;
     font-size: .7rem
 }
 
