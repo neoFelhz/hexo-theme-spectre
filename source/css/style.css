@@ -6,13 +6,55 @@ body {
     padding: .4rem .4rem .4rem .4rem;
 }
 
-
 @media (max-width: 960px) {
     .off-canvas .off-canvas-content {
         padding: 0;
     }
-    
 }
+
+.container-post-list .card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .06), 0 3px 1px -2px rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .06);
+}
+
+.container-post-list .with-thumbnail {
+    min-height: 20rem;
+}
+
+.container-post-list .no-thumbnail {
+    min-height: 9.5rem;
+}
+
+.container-post-list .card .card-body {
+    font-size: .7rem;
+}
+
+.container-post-list .card .card-body p {
+    margin: 0;
+}
+
+.container-post-list {
+    max-width: 34rem;
+}
+
+.container-post-list .card-image {
+    display: flex;
+    box-sizing: border-box;
+    background-size: cover;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: flex-end;
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-origin: padding-box;
+    background-attachment: scroll;
+}
+
 
 /*============* * Sidebar */
 
@@ -25,17 +67,29 @@ body {
     padding-top: 1rem;
 }
 
-#sidebar {
-    min-width: 280px;
-    width: 280px;
+#sidebar,
+#sidebar-content {
+    min-width: 14rem;
+    width: 14rem;
+}
+
+#sidebar-content {
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
 }
 
 @media (max-width: 960px) {
+    #sidebar,
+    #sidebar-content {
+        min-width: 12rem;
+        width: 12rem;
+    }
     #sidebar {
-        box-shadow: 1px 0 7.5px rgba(0,0,0,.2);
-        -webkit-box-shadow: 1px 0 7.5px rgba(0,0,0,.2);
-        min-width: 240px;
-        width: 240px;
+        box-shadow: 1px 0 7.5px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: 1px 0 7.5px rgba(0, 0, 0, .2);
     }
     #sidebar .sidebar-top {
         padding-top: 3.5rem;
@@ -46,7 +100,6 @@ body {
     margin-top: 0;
     transition: all .2s ease-in-out;
 }
-
 
 #sidebar-content .nav-item:hover {
     background-color: #e0e0e0;
@@ -105,7 +158,8 @@ body {
 footer {
     padding: 1.2rem;
     color: #9e9e9e;
-    font-size: .7rem
+    font-size: .7rem;
+    max-width: 36rem;
 }
 
 footer a {
@@ -158,10 +212,6 @@ footer a:hover {
     margin-right: auto;
 }
 
-.footer-develop {
-    margin-right: 2.5rem;
-}
-
 .footer-develop a {
     color: #6b6b6b;
 }
@@ -169,9 +219,6 @@ footer a:hover {
 @media (min-width: 1024px) {
     footer {
         padding: 1.6rem .8rem;
-    }
-    .footer-copyright {
-        padding: 0;
     }
 }
 
