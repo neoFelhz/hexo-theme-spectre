@@ -1,65 +1,43 @@
-<ul class="mdui-list" mdui-collapse>
-
     <!-- Homepage -->
     <% if(theme.sidebar.homepage.use === true) { %>
-        <a href="<%= config.root %>" class="mdui-list-item">
-            <% if(theme.sidebar.homepage.icon) { %>
-                <i class="mdui-list-item-icon mdui-icon material-icons"><%= theme.sidebar.homepage.icon %></i>
-            <% } %>
-            <div class="mdui-list-item-content"><%= __('sidebar.homepage') %></div>
-        </a>
+        <li class="nav-item">
+            <a href="<%= config.root %>">
+                <% if(theme.sidebar.homepage.icon) { %>
+                    <i class="icon material-icons sidebar-icons"><%= theme.sidebar.homepage.icon %></i>
+                <% } %>
+            <%= __('sidebar.homepage') %>
+            </a>
+        </li>
         <% if(theme.sidebar.homepage.divider === true) { %>
-            <li class="mdui-divider"></li>
+            <div class="divider"></div>
         <% } %>
-    <% } %>
-
-    <!-- Categories  -->
-    <% if(theme.sidebar.categories.use === true) { %>
-    <div class="mdui-collapse-item">
-        <div class="mdui-collapse-item-header mdui-list-item">
-            <% if(theme.sidebar.categories.icon) { %>
-                <i class="mdui-list-item-icon mdui-icon material-icons"><%= theme.sidebar.categories.icon %></i>
-            <% } %>
-            <div class="mdui-list-item-content"><%= __('title.category') %></div>
-            <i class="mdui-collapse-item-arrow mdui-icon material-icons">arrow_drop_down</i>
-        </div>
-        <div class="mdui-collapse-item-body mdui-list">
-            <% site.categories.map(function(category){ %>
-                <a href="<%= url_for(category.path) %>" class="mdui-list-item sidebar-categories-link">
-                    <%= category.name %>
-                    <div style="flex-grow: 1;"></div>
-                    <span class="sidebar-categories-count"><%= category.length %></span>
-                </a>
-            <% }) %>
-        </div>
-    </div>
-    <% if(theme.sidebar.categories.divider === true) { %>
-        <li class="mdui-divider"></li>
-    <% } %>
     <% } %>
 
     <!-- Pages  -->
     <% for (var i in theme.sidebar.pages){ %>
-        <a href="<%= theme.sidebar.pages[i].link %>" class="mdui-list-item">
-            <% if(theme.sidebar.pages[i].icon){ %>
-                <i class="mdui-list-item-icon mdui-icon material-icons"><%= theme.sidebar.pages[i].icon %></i>
-            <% } %>
-            <div class="mdui-list-item-content"><%= i %></div>
-        </a>
+        <li class="nav-item">
+            <a href="<%= theme.sidebar.pages[i].link %>">
+                <% if(theme.sidebar.pages[i].icon){ %>
+                    <i class="icon material-icons sidebar-icons"><%= theme.sidebar.pages[i].icon %></i>
+                <% } %>
+                <%= i %>
+            </a>
+        </li>
         <% if(theme.sidebar.pages[i].divider === true) { %>
-            <li class="mdui-divider"></li>
+            <div class="divider"></div>
         <% } %>
     <% } %>
 
     <!-- Article Number  -->
     <% if(theme.sidebar.article_num.use === true) { %>
-        <a href="<%= url_for('archives/') %>" class="mdui-list-item">
-            <div class="mdui-list-item-content"><%= __('sidebar.article_num') %></div>
-            <span class="sidebar-badge"><%= site.posts.length %></span>
-        </a>
+        <li class="nav-item">
+            <a href="<%= url_for('archives/') %>" style="display: flex">
+                <%= __('sidebar.article_num') %>
+                <div style="flex-grow: 1;padding-left: 1rem!important"></div>
+                <span class="sidebar-badge"><%= site.posts.length %></span>
+            </a>
+        </li>
         <% if(theme.sidebar.article_num.divider === true) { %>
-            <li class="mdui-divider"></li>
+            <div class="divider"></div>
         <% } %>
     <% } %>
-
-</ul>

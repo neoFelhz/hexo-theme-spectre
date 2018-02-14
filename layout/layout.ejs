@@ -3,17 +3,28 @@
 <html>
     <%- partial('_partial/head') %>
 
-    <body class="mdui-drawer-body-left">
-        <div class="mdui-drawer">
-            <div id="sidebar-content">
-                <%- partial('_partial/sidebar') %>
+    <body>
+        <div class="off-canvas off-canvas-sidebar-show">
+            <!-- off-screen toggle button -->
+            <a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar">
+                <i class="icon material-icons casino-icons">menu</i>
+            </a>
+
+            <div id="sidebar" class="off-canvas-sidebar">
+                <div id="sidebar-content">
+                    <%- partial('_partial/sidebar') %>
+                </div>
+            </div>
+
+            <a class="off-canvas-overlay" href="#close"></a>
+
+            <div class="off-canvas-content">
+                <main>
+                    <%- body %>
+                </main>
+                <%- partial('_partial/footer') %>
             </div>
         </div>
-        <!-- Main Container -->
-        <main>
-            <%- body %>
-        </main>
-        <%- partial('_partial/footer') %>
         <%- partial('_source/footer') %>
     </body>
 
