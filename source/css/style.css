@@ -49,7 +49,8 @@ body {
     margin: 0;
 }
 
-.container-post-list .card-image {
+.container-post-list .card-image,
+.container-post .card-image {
     display: flex;
     box-sizing: border-box;
     background-size: cover;
@@ -62,6 +63,9 @@ body {
     background-origin: padding-box;
     background-attachment: scroll;
 }
+
+
+/*============* * Utilities */
 
 
 /*============* * Sidebar */
@@ -158,6 +162,87 @@ body {
     min-width: 1rem;
     text-align: center;
     margin: .6rem 0;
+}
+
+
+/*============* * Post */
+
+.container-post {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .container-post {
+        padding: 0;
+        max-width: 100vw;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 480px) {
+    .container-post {
+        padding: .5rem;
+        max-width: calc(100vw - 1rem);
+    }
+}
+
+@media (min-width: 960px) {
+    .container-post {
+        max-width: calc(100vw - 16rem);
+    }
+    .container-post .card {
+        max-width: 38rem;
+    }
+}
+
+.container-post .card-image {
+    height: 14rem;
+}
+
+.container-post .card-header {
+    background-color: #f5f5f5;
+}
+
+.post-tags-list {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+
+.post-tags-list-item {
+    list-style: none;
+    float: left;
+    font-size: .6rem;
+    border: 1px solid #c2c2c2;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    padding-right: .3rem;
+    padding-left: .4rem;
+    margin: .4rem .4rem 1rem 0;
+    text-align: center;
+    -webkit-appearance: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2rem;
+}
+
+.post-tags-list-link {
+    color: #535d72!important;
+}
+
+.container-post .card {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .06), 0 3px 1px -2px rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .06);
+    border-radius: .15rem;
+}
+
+#post-content {
+    max-width: 96%;
+    margin: 1.1rem auto;
+    padding-top: 0;
 }
 
 

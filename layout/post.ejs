@@ -1,0 +1,14 @@
+<!-- Layouts -->
+<% if(page.layout === 'tags') { %>
+    <!-- Tags Cloud -->
+    <%- partial('_wpages/tagcloud') %>
+<% } else if(page.layout === 'links') { %>
+    <!-- Single Links Page -->
+    <%- partial('_pages/links') %>
+<% } else if(page.layout === 'timeline') { %>
+    <!-- Single Timeline Page -->
+    <%- partial('_pages/timeline') %>
+<% } else { %>
+    <!-- Post Moudule -->
+    <%- partial('_pages/post') %>
+<% } %>

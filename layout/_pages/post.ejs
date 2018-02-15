@@ -1,0 +1,37 @@
+<div class="container container-post">
+    <div class="card">
+        <% if(page.thumbnail) { %>
+            <div class="card-image" style="background-image: url('<%= page.thumbnail %>');"></div>
+        <% } %>
+        <div class="card-header">
+            <div class="card-title h4"><%= page.title %></div>
+            <div class="card-subtitle text-gray"><%= date(page.date, config.date_format) %></div>
+            <!-- Post Tags -->
+            <%- list_tags(page.tags, {
+                show_count: false,
+                class: 'post-tags',
+                style: 'list',
+                separator: ''
+            }) %>
+        </div>
+        <div id="post-content" class="card-body">
+            <%- page.content %>
+            <% if (page.hide_license !== true && theme.license || page.license) { %>
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                        <% if (page.license) { %>
+                            <%- page.license %>
+                        <% } else { %> 
+                            <%- theme.license %>
+                        <% } %></strong>
+                        <br>
+                        <strong><%- __('post.permalink') %></strong><a href="<%= page.permalink %>"><%= page.permalink %></a>
+                    </p>
+                </blockquote>
+            <% } %>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary">Do</button>
+        </div>
+    </div>
+</div>
