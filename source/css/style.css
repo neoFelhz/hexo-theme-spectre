@@ -2,8 +2,17 @@ body {
     background: #f8f9fa;
 }
 
+code {
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+}
+
 .off-canvas .off-canvas-content {
     padding: .4rem .4rem .4rem .4rem;
+}
+
+.off-canvas .off-canvas-overlay {
+    background: #000;
+    opacity: .35;
 }
 
 @media (max-width: 960px) {
@@ -409,7 +418,7 @@ body {
 
 #post-content ul,
 #post-content ol {
-    padding-left: 1.2rem;
+    padding-left: 1rem;
     font-size: .7rem;
     line-height: 1.5;
     overflow: hidden;
@@ -588,6 +597,9 @@ body {
     padding: 0px 5px;
     background-color: rgba(0, 0, 0, 0.04);
     border-radius: 3px;
+    color: inherit;
+    font-size: 95%;
+    line-height: 1.5;
 }
 
 #post-content pre>code {
