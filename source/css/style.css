@@ -258,6 +258,11 @@ code {
     border-radius: .15rem;
 }
 
+.container-post .card-footer {
+    padding: 1.5rem;
+    background-color: #eee;
+}
+
 #post-content {
     max-width: 96%;
     margin: 1.1rem auto;

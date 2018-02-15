@@ -1,5 +1,10 @@
 <!-- Import JS -->
 
+<!-- Comment -->
+<% if(theme.comment.use){ %>
+    <%- partial('_plugin/comment/' + theme.comment.use + '/common') %>
+ <% } %>
+
 <!-- MathJax -->
 <% if (page.mathjax) { %>
     <%- partial('_plugin/mathjax') %>
@@ -14,6 +19,15 @@
 <% if (theme.hanabi.enable) { %>
     <%- partial('_plugin/highlight/hanabi') %>
 <% } %>
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Start Queue
+    window.onload = function() {
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    };
+</script>
 
 <!-- Console log -->
 <%- partial('_widget/console_runjs') %>

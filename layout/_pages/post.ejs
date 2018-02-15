@@ -32,7 +32,10 @@
                 </blockquote>
             <% } %>
         </div>
-        <div class="card-footer bg-gray">
-        </div>
+        <% if(theme.comment.use){ %>
+            <div class="card-footer">
+                <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>
+            </div>
+        <% } %>
     </div>
 </div>
