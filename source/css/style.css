@@ -73,6 +73,7 @@ body {
 .off-canvas-toggle {
     color: #546e7a!important;
     margin: 1rem 0 0 .5rem;
+    position: fixed!important;
 }
 
 #sidebar .sidebar-top {
@@ -185,6 +186,9 @@ body {
         padding: .5rem;
         max-width: calc(100vw - 1rem);
     }
+    .container-post .card {
+        margin-top: 5rem
+    }
 }
 
 @media (min-width: 960px) {
@@ -192,7 +196,7 @@ body {
         max-width: calc(100vw - 16rem);
     }
     .container-post .card {
-        max-width: 38rem;
+        max-width: 32rem;
     }
 }
 
@@ -200,8 +204,14 @@ body {
     height: 14rem;
 }
 
+.card-no-image {
+    height: 1.8rem;
+    background-color: #f5f5f5;
+}
+
 .container-post .card-header {
     background-color: #f5f5f5;
+    padding: 1rem;
 }
 
 .post-tags-list {
@@ -222,7 +232,7 @@ body {
     border-radius: 3px;
     padding-right: .3rem;
     padding-left: .4rem;
-    margin: .4rem .4rem 1rem 0;
+    margin: .4rem .4rem 0 0;
     text-align: center;
     -webkit-appearance: none;
     font-weight: 400;
@@ -243,6 +253,394 @@ body {
     max-width: 96%;
     margin: 1.1rem auto;
     padding-top: 0;
+}
+
+
+/*============* * Post Content Style */
+
+#post-content .line {
+    height: 1rem;
+}
+
+#post-content figure {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#post-content,
+#post-content p {
+    font-size: .8rem;
+    line-height: 1.7;
+    overflow: hidden;
+}
+
+#post-content>*:first-child {
+    margin-top: 0 !important;
+}
+
+#post-content>*:last-child {
+    margin-bottom: 0 !important;
+}
+
+#post-content a.absent {
+    color: #c00;
+}
+
+#post-content a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#post-content h1,
+#post-content h2,
+#post-content h3,
+#post-content h4,
+#post-content h5,
+#post-content h6 {
+    margin: 1.2rem 0 .6rem;
+    padding: 0 0 .1rem .1rem;
+    font-weight: bold;
+    line-height: 1.7;
+    cursor: text;
+    position: relative;
+}
+
+#post-content h1 .octicon-link,
+#post-content h2 .octicon-link,
+#post-content h3 .octicon-link,
+#post-content h4 .octicon-link,
+#post-content h5 .octicon-link,
+#post-content h6 .octicon-link {
+    display: none;
+    color: #000;
+}
+
+#post-content h1:hover a.anchor,
+#post-content h2:hover a.anchor,
+#post-content h3:hover a.anchor,
+#post-content h4:hover a.anchor,
+#post-content h5:hover a.anchor,
+#post-content h6:hover a.anchor {
+    text-decoration: none;
+    line-height: 1;
+    padding-left: 0;
+    margin-left: -22px;
+    top: 15%;
+}
+
+#post-content h1:hover a.anchor .octicon-link,
+#post-content h2:hover a.anchor .octicon-link,
+#post-content h3:hover a.anchor .octicon-link,
+#post-content h4:hover a.anchor .octicon-link,
+#post-content h5:hover a.anchor .octicon-link,
+#post-content h6:hover a.anchor .octicon-link {
+    display: inline-block;
+}
+
+#post-content h1 tt,
+#post-content h1 code,
+#post-content h2 tt,
+#post-content h2 code,
+#post-content h3 tt,
+#post-content h3 code,
+#post-content h4 tt,
+#post-content h4 code,
+#post-content h5 tt,
+#post-content h5 code,
+#post-content h6 tt,
+#post-content h6 code {
+    font-size: inherit;
+}
+
+#post-content h1 {
+    font-size: 2.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+#post-content h2 {
+    font-size: 2em;
+    border-bottom: 1px solid #eee;
+}
+
+#post-content h3 {
+    font-size: 1.6em;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#post-content h4 {
+    font-size: 1.2em;
+}
+
+#post-content h5 {
+    font-size: 1em;
+}
+
+#post-content h6 {
+    color: #777;
+    font-size: 1em;
+}
+
+#post-content p,
+#post-content blockquote,
+#post-content ul,
+#post-content ol,
+#post-content dl,
+#post-content table {
+    margin: .7rem 0;
+}
+
+#post-content hr {
+    height: .12rem;
+    padding: 0;
+    margin: .85rem 0;
+    background-color: #e7e7e7;
+    border: 0;
+}
+
+#post-content li p.first {
+    display: inline-block;
+}
+
+#post-content ul,
+#post-content ol {
+    padding-left: 1.2rem;
+    font-size: .7rem;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+#post-content ul.no-list,
+#post-content ol.no-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#post-content ul ul,
+#post-content ul ol,
+#post-content ol ol,
+#post-content ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#post-content dl {
+    padding: 0;
+}
+
+#post-content dl dt {
+    font-size: .7rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#post-content dl dd {
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+#post-content blockquote {
+    border-left: .2rem solid #DDD;
+    padding: 0 .7rem;
+    color: #777;
+    font-style: normal;
+}
+
+#post-content blockquote>:first-child {
+    margin-top: 0px;
+}
+
+#post-content blockquote>:last-child {
+    margin-bottom: 0px;
+}
+
+#post-content table {
+    width: 100%;
+    overflow: auto;
+    display: block;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#post-content table th {
+    font-weight: bold;
+}
+
+#post-content table th,
+#post-content table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+#post-content table tr {
+    /*    display: table;*/
+    background-color: #fff;
+}
+
+#post-content table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+#post-content img {
+    max-width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#post-content span.frame {
+    display: block;
+    overflow: hidden;
+}
+
+#post-content span.frame>span {
+    border: 1px solid #ddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto;
+}
+
+#post-content span.frame span img {
+    display: block;
+    float: left;
+}
+
+#post-content span.frame span span {
+    clear: both;
+    color: #333;
+    display: block;
+    padding: 5px 0 0;
+}
+
+#post-content span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+#post-content span.align-center>span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center;
+}
+
+#post-content span.align-center span img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#post-content span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+#post-content span.align-right>span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right;
+}
+
+#post-content span.align-right span img {
+    margin: 0;
+    text-align: right;
+}
+
+#post-content span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left;
+}
+
+#post-content span.float-left span {
+    margin: 13px 0 0;
+}
+
+#post-content span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right;
+}
+
+#post-content span.float-right>span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right;
+}
+
+#post-content code,
+#post-content tt {
+    margin: 0 2px;
+    padding: 0px 5px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+}
+
+#post-content pre>code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent;
+}
+
+#post-content pre {
+    background-color: #f7f7f7;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 16px;
+    border-radius: 3px;
+}
+
+#post-content .gutter,
+#post-content .code {
+    /*  background: #f7f7f7;*/
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 0;
+    border: none;
+    display: block;
+    border-radius: 0;
+}
+
+#post-content .code {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#post-content .gutter {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#post-content .gutter pre,
+#post-content .code pre {
+    margin: 0;
+    display: block;
+}
+
+#post-content pre code,
+#post-content pre tt {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
 }
 
 
