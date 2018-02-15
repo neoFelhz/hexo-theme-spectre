@@ -8,13 +8,24 @@
         <div class="card-header">
             <div class="card-title h4"><%= page.title %></div>
             <div class="card-subtitle text-gray"><%= date(page.date, config.date_format) %></div>
+            <% if (page.categories && page.categories.length) { %>
+                <!-- Category -->
+                <%- list_categories(page.categories, {
+                    show_count: false,
+                    class: 'post-categories',
+                    style: 'list'
+                    separator: ''
+                }) %>
+            <% } %>
             <!-- Post Tags -->
-            <%- list_tags(page.tags, {
-                show_count: false,
-                class: 'post-tags',
-                style: 'list',
-                separator: ''
-            }) %>
+            <% if (page.tags && page.tags.length) { %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'post-tags',
+                    style: 'list',
+                    separator: ''
+                }) %>
+            <% } %>
         </div>
         <div id="post-content" class="card-body">
             <%- page.content %>

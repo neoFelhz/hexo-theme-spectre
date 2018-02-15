@@ -253,6 +253,37 @@ code {
     color: #535d72!important;
 }
 
+.post-categories-list {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+
+.post-categories-list-item {
+    list-style: none;
+    float: left;
+    font-size: .6rem;
+    border: 1px solid #c2c2c2;
+    background-color: #c2c2c2;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    padding-right: .3rem;
+    padding-left: .4rem;
+    margin: .4rem .4rem 0 0;
+    text-align: center;
+    -webkit-appearance: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2rem;
+}
+
+.post-categories-list-link {
+    color: #444!important;
+}
+
 .container-post .card {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .06), 0 3px 1px -2px rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .06);
     border-radius: .15rem;
