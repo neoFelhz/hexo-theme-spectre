@@ -12,6 +12,18 @@ body {
     }
 }
 
+.container-post-list {
+    max-width: 34rem;
+}
+
+.container-index-nav {
+    max-width: 33rem;
+}
+
+.page-number {
+    display: none;
+}
+
 .container-post-list .card {
     display: flex;
     flex-direction: column;
@@ -35,10 +47,6 @@ body {
 
 .container-post-list .card .card-body p {
     margin: 0;
-}
-
-.container-post-list {
-    max-width: 34rem;
 }
 
 .container-post-list .card-image {
