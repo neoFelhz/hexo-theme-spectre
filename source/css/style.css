@@ -3,7 +3,7 @@ body {
 }
 
 code {
-    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .off-canvas .off-canvas-content {
@@ -76,9 +76,14 @@ code {
 
 /*============* * Utilities */
 
-#disqus_thread a{
+#disqus_thread a {
     color: #656c7a;
 }
+
+.disqus_click_btn {
+    display: none
+}
+
 
 /*============* * Sidebar */
 
