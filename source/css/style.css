@@ -76,6 +76,9 @@ code {
 
 /*============* * Utilities */
 
+#disqus_thread a{
+    color: #656c7a;
+}
 
 /*============* * Sidebar */
 

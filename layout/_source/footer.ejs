@@ -1,4 +1,5 @@
 <!-- Import JS -->
+<script src="/libs/js/lazyload.min.js"></script>
 
 <!-- Comment -->
 <% if(theme.comment.use){ %>
@@ -21,6 +22,9 @@
 <% } %>
 
 <script type="text/ls-javascript" id="lazy-load">
+    var myLazyLoad = new LazyLoad({
+        elements_selector: ".lazy"
+    });
     // Start Queue
     window.onload = function() {
         setInterval(function(){
