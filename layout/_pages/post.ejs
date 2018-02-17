@@ -1,5 +1,5 @@
 <div class="container container-post">
-    <div class="card post-card centered">
+    <div class="card post-card col-mx-auto">
         <% if(page.thumbnail) { %>
             <div class="card-image" style="background-image: url('<%= page.thumbnail %>');"></div>
         <% } else { %>
@@ -26,8 +26,14 @@
                     separator: ''
                 }) %>
             <% } %>
-            <br>
+            <!-- Post Share -->
+            <%- partial('_partial/menu/post-share') %>
+            <!-- Post Qrcoe -->
+            <% if(theme.post.qrcode.enable === true) { %>
+                <%- partial('_partial/menu/post-qrcode') %>
+            <% } %>
         </div>
+        <br>
         <div id="post-content" class="card-body">
             <%- page.content %>
             <% if (page.hide_license !== true && theme.post.license || page.license) { %>

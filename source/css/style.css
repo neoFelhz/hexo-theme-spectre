@@ -214,6 +214,7 @@ code {
 @media (min-width: 960px) {
     .container-post {
         max-width: calc(100vw - 14rem);
+        padding-top: 1.8rem;
     }
     .post-card {
         max-width: 38rem;
@@ -238,7 +239,10 @@ code {
 .post-card .card-header {
     background-color: #f5f5f5;
     padding: 1rem;
-    padding-bottom: 1.8rem;
+}
+
+.post-card .post-btn-list {
+    background-color: #f5f5f5;
 }
 
 .post-tags-list,
