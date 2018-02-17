@@ -1,5 +1,5 @@
 <div class="container container-post">
-    <div class="card">
+    <div class="card post-card">
         <% if(page.thumbnail) { %>
             <div class="card-image" style="background-image: url('<%= page.thumbnail %>');"></div>
         <% } else { %>
@@ -49,4 +49,14 @@
             </div>
         <% } %>
     </div>
+
+    <% var toc_obj = toc(page.content, {
+        class: 'post-toc',
+        list_number: theme.post.toc.linenumber || false,
+        style: 'max-height:80vh; overflow-y:scroll;'
+    }) %>
+    <div class="card post-tos">
+        <%- toc_obj %>
+    </div>
+
 </div>
