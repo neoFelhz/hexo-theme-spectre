@@ -1,5 +1,5 @@
 <div class="container container-post">
-    <div class="card post-card">
+    <div class="card post-card centered">
         <% if(page.thumbnail) { %>
             <div class="card-image" style="background-image: url('<%= page.thumbnail %>');"></div>
         <% } else { %>
@@ -26,6 +26,7 @@
                     separator: ''
                 }) %>
             <% } %>
+            <br>
         </div>
         <div id="post-content" class="card-body">
             <%- page.content %>
@@ -43,6 +44,8 @@
                 </blockquote>
             <% } %>
         </div>
+        <div class="divider"></div>
+        <%- partial('_partial/post-nav') %>
         <% if(theme.comment.use){ %>
             <div class="card-footer">
                 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>
@@ -50,13 +53,12 @@
         <% } %>
     </div>
 
-    <% var toc_obj = toc(page.content, {
+    <!--<% var toc_obj = toc(page.content, {
         class: 'post-toc',
         list_number: theme.post.toc.linenumber || false,
-        style: 'max-height:80vh; overflow-y:scroll;'
     }) %>
     <div class="card post-tos">
         <%- toc_obj %>
-    </div>
+    </div>-->
 
 </div>
