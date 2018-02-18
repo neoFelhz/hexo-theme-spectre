@@ -6,32 +6,26 @@
             <div class="card-no-image"></div>
         <% } %>
         <div class="card-header">
-            <div class="card-title h4"><%= page.title %></div>
-            <div class="card-subtitle text-gray"><%= date(page.date, config.date_format) %></div>
-            <!-- Category -->
-            <% if (page.categories && page.categories.length) { %>
-                <%- list_categories(page.categories, {
-                    show_count: false,
-                    class: 'post-categories',
-                    style: 'list',
-                    separator: ''
-                }) %>
-            <% } %>
-            <!-- Post Tags -->
-            <% if (page.tags && page.tags.length) { %>
-                <%- list_tags(page.tags, {
-                    show_count: false,
-                    class: 'post-tags',
-                    style: 'list',
-                    separator: ''
-                }) %>
-            <% } %>
-            <!-- Post Share -->
-            <%- partial('_partial/menu/post-share') %>
-            <!-- Post Qrcoe -->
-            <% if(theme.post.qrcode.enable === true) { %>
-                <%- partial('_partial/menu/post-qrcode') %>
-            <% } %>
+            <div class="card-header-title">
+                <div class="card-title h4"><%= page.title %></div>
+                <div class="card-subtitle text-gray">
+                    <p class="card-subtitle text-gray mb-0">Publish: <%= date(page.date, config.date_format) %>
+                    <%  var posted = date(page.date, 'MMM DD, YYYY')
+                        var edited = date(page.updated, 'MMM DD, YYYY')
+                        if (posted !== edited) { %>
+                        ·&nbsp;Update: <%= date(page.updated, config.date_format) %>
+                    <% } %>
+                    </p>
+                </div>
+            </div>
+            <div class="card-header-info">
+                <!-- Post Share -->
+                <%- partial('_partial/menu/post-share') %>
+                <!-- Post Qrcoe -->
+                <% if(theme.post.qrcode.enable === true) { %>
+                    <%- partial('_partial/menu/post-qrcode') %>
+                <% } %>
+            </div>
         </div>
         <br>
         <div id="post-content" class="card-body">
@@ -50,7 +44,27 @@
                 </blockquote>
             <% } %>
         </div>
-        <div class="divider"></div>
+        <!-- Category -->
+        <div class="post-tag-categories-list bg-gray">
+            <% if (page.categories && page.categories.length) { %>
+                <%- list_categories(page.categories, {
+                    show_count: false,
+                    class: 'post-categories',
+                    style: 'list',
+                    separator: ''
+                }) %>
+            <% } %>
+            <!-- Post Tags -->
+            <% if (page.tags && page.tags.length) { %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'post-tags',
+                    style: 'list',
+                    separator: ''
+                }) %>
+            <% } %>
+        </div>
+        <div class="divider m-0"></div>
         <%- partial('_partial/post-nav') %>
         <% if(theme.comment.use){ %>
             <div class="card-footer">
