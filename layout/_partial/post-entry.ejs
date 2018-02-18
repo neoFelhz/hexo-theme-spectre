@@ -5,7 +5,7 @@
     <div class="card no-thumbnail">
 <% } %>
     <div class="card-header">
-        <div class="card-title h5"><%= post.title %></div>
+        <a class="card-title h5" href="<%= url_for(post.path) %>"><%= post.title %></a>
         <div class="card-subtitle text-gray"><%= date(post.date, config.date_format) %></div>
     </div>
     <div class="card-body">
