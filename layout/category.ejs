@@ -1,4 +1,4 @@
-<% if( is_tag() ) { %>
+<% if( is_category()){ %>
 
 <div class="container container-timeline">
     <div class="timeline">
@@ -9,9 +9,7 @@
             <div class="timeline-content">
                 <div class="tile">
                     <div class="tile-content">
-                        <p class="tile-title">
-                            <span class="tile-subtitle text-gray mb-2">分类</span>&nbsp;&nbsp;<span class="tile-title"><span class="h4"><%= page.tag %></span></span>
-                        </p>
+                        <span class="tile-subtitle text-gray mb-2">分类</span>&nbsp;&nbsp;<span class="tile-title"><span class="h4"><%= page.category %></span></span>
                     </div>
                 </div>
             </div>
@@ -41,44 +39,5 @@
 </div>
 
 <% } else { %>
-
-<style>
-    .tagscloud {
-        margin: 4rem 1.2rem 3rem;
-        padding: 0 1rem;
-    }
-    @media screen and (max-width: 480px) {
-        .tagscloud {
-            padding: 0;
-        }
-    }
-    .tagscloud a {
-        text-decoration:none;
-        padding: .1rem .5rem;
-        margin: .5rem .1rem;
-        line-height: 2rem;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
-    .tagscloud a:hover {
-        transition: .6s;
-        opacity: 1;
-        background-color: #fafafa;
-        padding: .75rem;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
-
-<div class="tagscloud">
-        <%- tagcloud({
-            min_font: 16,
-            max_font: 35,
-            amount: 9999,
-            color: true,
-            start_color: '#757575',
-            end_color: '#212121',
-        }) %>
-</div>
 
 <% } %>
