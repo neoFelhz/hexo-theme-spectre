@@ -245,11 +245,11 @@ code {
     text-align: center;
     padding: 0;
     margin: 0 auto;
-    max-width: 18rem;
+    max-width: 16rem;
 }
 
 .container-links .link-item {
-    width: 18rem;
+    width: 15rem;
     margin: 1rem .5rem;
     padding: 0;
     list-style: none;
@@ -272,7 +272,7 @@ code {
 }
 
 .container-links .tile-content {
-    padding: .6rem .15rem;
+    padding: .6rem 0!important;
 }
 
 .container-links img {
