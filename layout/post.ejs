@@ -1,8 +1,5 @@
 <!-- Layouts -->
-<% if is_archive() %>
-    <!-- Timesline -->
-    <%- partial('_pages/timeline') %>
-<% else if(page.layout === 'tags') { %>
+<% if(page.layout === 'tags') { %>
     <!-- Tags Cloud -->
     <%- partial('_pages/tagcloud') %>
 <% } else if(page.layout === 'links') { %>

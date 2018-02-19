@@ -216,6 +216,27 @@ code {
     color: #fff!important;
 }
 
+
+/*============* * Timeline */
+
+.container-timeline {
+    padding: 4rem 1.5rem 2rem;
+    max-width: 34rem;
+}
+
+@media (max-width: 959px) and (min-width: 480px) {
+    .container-timeline {
+        padding: 4rem 1.8rem
+    }
+}
+
+@media (min-width: 960px) {
+    .container-timeline {
+        padding: 1.8rem 3.5rem 2rem
+    }
+}
+
+
 /*============* * Utilities */
 
 #disqus_thread a {
