@@ -18,7 +18,7 @@
 
     <% var last = 0, year, yearArr = []; %>
 
-    <% page.posts.sort('date', -1).each(function(post){ %>
+    <% site.posts.sort('date', -1).limit(site.posts.length).each(function(post){ %>
         <% year = post.date.year(); %>
         <% if (last != year){ %>
             <% if (yearArr.length != 0){ %>
@@ -70,8 +70,4 @@
     <% }) %>
 
     </div>
-</div>
-
-<div class="container container-index-nav">
-    <%- partial('_partial/index-nav') %>
 </div>
