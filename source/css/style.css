@@ -219,27 +219,35 @@ code {
 
 /*============* * Timeline */
 
-.container-timeline,
-.container-links {
+.container-timeline {
     padding: 4rem 1.5rem 2rem;
 }
 
 @media (max-width: 959px) and (min-width: 480px) {
-    .container-timeline,
-    .container-links {
+    .container-timeline {
         padding: 4rem 1.8rem
     }
 }
 
 @media (min-width: 960px) {
-    .container-timeline,
-    .container-links {
+    .container-timeline {
         padding: 1.8rem 3.5rem 2rem
     }
 }
 
 
 /*============* * Links */
+
+.container-links {
+    padding: 4rem 1rem;
+}
+
+@media (min-width: 960px) {
+    .container-links {
+        padding: 2rem .4rem
+    }
+}
+
 
 .link-list {
     text-align: center;
@@ -248,12 +256,33 @@ code {
     max-width: 16rem;
 }
 
+@media screen and (min-width: 680px) {
+    .link-list {
+        max-width: 32rem;
+    }
+}
+@media screen and (min-width: 1264px) {
+    .link-list {
+        max-width: 48rem;
+    }
+}
+@media screen and (min-width: 1584px) {
+    .link-list {
+        max-width: 64rem;
+    }
+}
+
 .container-links .link-item {
     width: 15rem;
-    margin: 1rem .5rem;
+    margin: .65rem .5rem;
     padding: 0;
     list-style: none;
     float: left;
+}
+
+.container-links .link-item a {
+    text-decoration: none;
+    color: #50596c;
 }
 
 .container-links .card {
@@ -277,6 +306,7 @@ code {
 
 .container-links img {
     vertical-align: middle;
+    height:72px;
 }
 
 
