@@ -11,10 +11,6 @@ head:
     google:
     baidu:
 
-  # Enable generate structured-data as JSON+LD for SEO or not.
-  #    Set as 'false' if it cause some wrong when `hexo g`.
-  structured_data: true
-
 # ---------------------------------------------------------------
 # Style Settings
 # ---------------------------------------------------------------
@@ -25,25 +21,7 @@ scheme: Paradox
 
 # Theme Color
 color:
-  theme_color: "#0097A7"
-  hyperlink_color: "#00838F"
-  button_color: "#757575"
   android_chrome_color: "#0097A7"
-
-# Card Elevation Level
-card_elevation: 2
-
-# Custom Fonts
-#    family: the font-family which will be used in the theme
-#    use: uri of fonts host.
-#        Available value: google | baomitu | ustc | custom | catnet
-#        - When you set as 'custom', you should fill in the value of 'custom_font_host', which should be a mirror of google fonts.
-#        - If you have setup your custom font-family, don't forget to add style tag with @font-face or link.tag with font css
-#          to /source/data/head.yml as custom code, to load custom font files.
-fonts:
-  family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
-  use: google
-  custom_font_host:
 
 # ---------------------------------------------------------------
 # Customsize Settings
@@ -59,22 +37,8 @@ url:
 img:
   logo: "/img/logo.png"
   avatar: "/img/avatar.png"
-  sidebar_header: "/img/sidebar_header.png"
+  daily_pic: "/img/daily_pic.png"
 
-  daily_pic:
-    # Available value: custom | bing
-    use: custom
-    # bing available parameter:
-    #    new | color= | type=
-    #        color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
-    #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
-    bing_parameter:
-    custom:
-
-# Background Settings
-background:
-  purecolor: "#F5F5F5"
-  #bgimg: "/img/bg.png"
 
 # Slogan (will show at daily_pic)
 slogan: "Hi, nice to meet you"
@@ -108,12 +72,6 @@ post:
 
 # Footer Settings
 footer:
-  # Footer Text
-  # You can specify the text you want to show in footer, HTML tag is supported.
-  #   For example, you can setup ICP license number as:
-  #     '<a href="http://www.miitbeian.gov.cn" rel="nofollow">某ICP备xxxxxxxx号-x</a>'
-  text:
-
   # Footer Copyright
   # Specify the date when the site was setup.
   #    For example, if you set it as 2015, then footer will show '© 2015 - 2017'
@@ -150,7 +108,6 @@ sns_share:
 
 # Sidebar Customize
 sidebar:
-  email: youremail@email.com
   dropdown:
     Email Me:
       link: "#"
@@ -212,13 +169,6 @@ comment:
   valine_leancloud_appId: # leancloud application app id
   valine_leancloud_appKey: # leancloud application app key
 
-# Search Systems
-# Available value:
-#     swiftype | google | local
-search:
-  use: google
-  swiftype_key:
-
 # Analytics Systems
 # Available value:
 #     baidu | google | cnzz
@@ -226,71 +176,6 @@ analytics:
   google_site_id:
   baidu_site_id:
   cnzz_site_id:
-
-# Leancloud Views
-leancloud:
-  enable: false
-  app_id: #你的 app_id
-  app_key: #你的 app_key
-  av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
-
-# Busuanzi 不蒜子 Views
-busuanzi:
-  enable: false
-  all_site_uv: false
-  post_pv: false
-  busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
-
-# Code highlight
-# You can only enable one of them to avoid issues.
-# Also you need to disable highlight option in hexo's _config.yml.
-#
-#    Prettify
-#        theme: # Available value in /source/css/prettify/[theme].min.css
-prettify:
-  enable: false
-  theme: "github-v2"
-
-#    Hanabi (https://github.com/egoist/hanabi)
-#        line_number: [true/false] # Show line number for code block
-#        includeDefaultColors: [true/false] # Use default hanabi colors
-#        customColors: This value accept a string or am array to setting for hanabi colors.
-#                    - If `includeDefaultColors` is true, this will append colors to the color pool
-#                    - If `includeDefaultColors` is false, this will instead default color pool
-hanabi:
-  enable: false
-  line_number: true
-  includeDefaultColors: true
-  customColors: 
-
-
-# Files Vendors
-# Set a CDN for the files src you want to customize. The url should with protocol.
-# Default(empty) will load the files from the origin server.
-vendors:
-# MaterialCDN
-#   You can load theme unique files from your private cdn or oss.
-#   The new src will have the base domain you configured below.
-#   For example
-#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source
-    materialcdn:
-
-# Third party library
-#   You can load these files from public cdn.
-#   For example
-#       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
-    # jQuery 2.2.0
-    jquery:
-    # nprogress 0.2.0
-    nprogress:
-    # FontAwesome 4.5.0
-    fontawesome:
-    # MathJax 2.7.0-2.7.1
-    mathjax:
-    # Prettify r298 (only prettify.js)
-    prettify:
-    # Material Icons 3.0.1
-    material_icons:
 
 # ---------------------------------------------------------------
 # Do Not Edit Below This Line, unless you know what you are doing!

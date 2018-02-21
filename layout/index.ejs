@@ -1,34 +1,8 @@
 <% if( (page.current === 1) && (is_home()) ) { %>
 <div class="container container-header">
     <div class="columns">
-        <div class="column col-xs-12 col-8 daily_pic">
-            <div class="card">
-                <div class="card-image" style="background-image:url(https://s.nfz.yecdn.com/img/d.jpg!t)">
-                    <p>孤独之人 不应执着 为何仍追逐幻梦</p>
-                </div>
-                <div class="card-footer bg-gray hide-xs">
-                    <figure class="avatar">
-                        <img src="https://s.nfz.yecdn.com/img/pwa-icons/icon-96x96.png!t">
-                    </figure>
-                    <div class="card-subtitle"><strong>neoFelhz</strong></div>
-                </div>
-            </div>
-        </div>
-        <div class="column col-xs-12 col-4 author_info">
-            <div class="card">
-                <div class="card-header">
-                    <a href="<%= theme.url.logo %>" target="_blank">
-                        <img src="<%= theme.img.logo %>" alt="logo">
-                    </a>
-                </div>
-                <div class="card-footer bg-gray">
-                    <div class="card-subtitle show-xs"><strong>neoFelhz's Blog</strong></div>
-                    <div style="flex-grow: 1;"></div>
-                    <%- partial('_partial/menu/index-menu') %>
-                    <%- partial('_partial/menu/index-share') %>
-                </div>
-            </div>
-        </div>
+        <%- partial('_partial/index/daily_pic') %>
+        <%- partial('_partial/index/author_info') %>
     </div>
 </div>
 <% } %>

@@ -134,7 +134,7 @@ code {
 }
 
 .container-index-nav {
-    max-width: 33rem;
+    max-width: 36rem;
 }
 
 .page-number {
@@ -546,7 +546,7 @@ html *::-webkit-scrollbar-thumb {
 }
 
 .post-footer-info {
-    padding: .6rem;
+    padding: 1rem;
 }
 
 .post-card .post-btn-list {

@@ -12,10 +12,10 @@
             <div class="divider"></div>
             <div class="card-header-info">
                 <figure class="avatar">
-                    <img src="https://s.nfz.yecdn.com/img/pwa-icons/icon-96x96.png!t">
+                    <img src="<%= theme.img.avatar %>">
                 </figure>
                 <div>
-                    <div class="card-subtitle"><strong>neoFelhz</strong></div>
+                    <div class="card-subtitle"><strong><%= config.author %></strong></div>
                     <div class="card-subtitle text-gray"><%= date(page.date, config.date_format) %></div>
                 </div>
                 <div style="flex-grow: 1;"></div>
@@ -32,49 +32,13 @@
         <br>
         <div id="post-content" class="card-body">
             <%- page.content %>
-            <% if (page.hide_license !== true && theme.post.license || page.license) { %>
-                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
-                    <p><strong>
-                        <% if (page.license) { %>
-                            <%- page.license %>
-                        <% } else { %> 
-                            <%- theme.post.license %>
-                        <% } %></strong>
-                        <br>
-                        <strong><%- __('post.permalink') %></strong><a href="<%= page.permalink %>"><%= page.permalink %></a>
-                    </p>
-                </blockquote>
-            <% } %>
+            <%- partial('_partial/post-license') %>
         </div>
-        <!-- Category -->
         <div class="post-footer-info bg-gray">
-            <p class="card-subtitle text-gray mb-0">Publish: <%= date(page.date, config.date_format) %>
-                <%  var posted = date(page.date, 'MMM DD, YYYY')
-                    var edited = date(page.updated, 'MMM DD, YYYY')
-                    if (posted !== edited) { %>
-                    ·&nbsp;Update: <%= date(page.updated, config.date_format) %>
-                <% } %>
-            </p>
-            <% if (page.categories && page.categories.length) { %>
-                <%- list_categories(page.categories, {
-                    show_count: false,
-                    class: 'post-categories',
-                    style: 'list',
-                    separator: ''
-                }) %>
-            <% } %>
-            <!-- Post Tags -->
-            <% if (page.tags && page.tags.length) { %>
-                <%- list_tags(page.tags, {
-                    show_count: false,
-                    class: 'post-tags',
-                    style: 'list',
-                    separator: ''
-                }) %>
-            <% } %>
+        <%- partial('_partial/post/footer-info') %>
         </div>
         <div class="divider m-0"></div>
-        <%- partial('_partial/post-nav') %>
+        <%- partial('_partial/post/nav') %>
         <% if(theme.comment.use){ %>
             <div class="card-footer">
                 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>

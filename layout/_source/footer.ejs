@@ -6,21 +6,6 @@
     <%- partial('_plugin/comment/' + theme.comment.use + '/common') %>
  <% } %>
 
-<!-- MathJax -->
-<% if (page.mathjax) { %>
-    <%- partial('_plugin/mathjax') %>
-<% } %>
-
-<!-- Prettify -->
-<% if (theme.prettify.enable){ %>
-    <%- partial('_plugin/highlight/prettify') %>
-<% } %>
-
-<!-- Hanabi -->
-<% if (theme.hanabi.enable) { %>
-    <%- partial('_plugin/highlight/hanabi') %>
-<% } %>
-
 <script type="text/ls-javascript" id="lazy-load">
     var myLazyLoad = new LazyLoad({
         elements_selector: ".lazy"

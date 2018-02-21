@@ -7,7 +7,7 @@
     "setup": "npm cache clean && npm install",
     "lint": "npm run setup && bash lint.sh"
   },
-  "author": "Viosey",
+  "author": "neoFelhz",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/neoFelhz/hexo-theme-spectre/issues"

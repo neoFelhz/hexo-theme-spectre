@@ -1,0 +1,25 @@
+<p class="card-subtitle text-gray mb-0">Publish: <%= date(page.date, config.date_format) %>
+    <%  var posted = date(page.date, 'MMM DD, YYYY')
+        var edited = date(page.updated, 'MMM DD, YYYY')
+        if (posted !== edited) { %>
+        ·&nbsp;Update: <%= date(page.updated, config.date_format) %>
+    <% } %>
+</p>
+<!-- Category -->
+<% if (page.categories && page.categories.length) { %>
+    <%- list_categories(page.categories, {
+        show_count: false,
+        class: 'post-categories',
+        style: 'list',
+        separator: ''
+    }) %>
+<% } %>
+<!-- Post Tags -->
+<% if (page.tags && page.tags.length) { %>
+    <%- list_tags(page.tags, {
+        show_count: false,
+        class: 'post-tags',
+        style: 'list',
+        separator: ''
+    }) %>
+<% } %>
