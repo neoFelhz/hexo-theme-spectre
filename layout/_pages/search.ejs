@@ -65,12 +65,12 @@
                     var position = 1;
                     if (isMatch) {
                         str += '<div class="tile"><div class="tile-content">';
-                        str += '<a href="' + data_url + '" target="_self"><p class="tile-title mb-2">' + data_title + '</p></a>';
+                        str += '<a href="' + data_url + '"><p class="tile-title mb-2">' + data_title + '</p></a>';
                         var content = data.content.trim().replace(/<[^>]+>/g, '');
                         if (first_occur >= 0) {
                             // cut out characters
                             var start = first_occur - 6;
-                            var end = first_occur + 6;
+                            var end = first_occur + 12;
                             if (start < 0) {
                                 start = 0;
                             }
@@ -85,10 +85,10 @@
                                 var regS = new RegExp(keyword, 'gi');
                                 match_content = match_content.replace(regS, '<strong><mark>' + keyword + '</mark></strong>');
                             })
-                            str += '<p class="tile-subtitle mb-1 text-gray">' + match_content + '...</p>';
+                            str += '<p class="tile-subtitle my-1 text-gray">' + match_content + '...</p>';
                         }
                         str += '</div></div>'
-                        str += '<div class="divider"></div>';
+                        str += '<div class="divider pt-1"></div>';
                         position++;
                     }
                 });

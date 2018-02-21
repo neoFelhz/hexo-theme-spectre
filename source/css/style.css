@@ -347,9 +347,18 @@ code {
     color: #50596c;
 }
 
-.container-search .search-output .tile-content p {
-    max-height: 3rem
+.container-search .search-output .tile-content {
+    max-height: 7rem;
 }
+
+.container-search .search-output .tile-subtitle {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
 
 
 /*============* * Utilities */
