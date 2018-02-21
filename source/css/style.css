@@ -281,7 +281,7 @@ code {
 
 .container-links .link-item {
     width: 15rem;
-    margin: .65rem .5rem;
+    margin: .5rem .5rem;
     padding: 0;
     list-style: none;
     float: left;
@@ -308,7 +308,7 @@ code {
 }
 
 .container-links .tile-content {
-    padding: .6rem 0!important;
+    padding: .65rem 0!important;
 }
 
 .container-links img {
