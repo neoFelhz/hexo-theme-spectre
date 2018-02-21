@@ -12,7 +12,22 @@
             <div class="divider"></div>
         <% } %>
     <% } %>
-    
+
+    <!-- Archives -->
+    <% if(theme.sidebar.archives.use === true) { %>
+        <li class="nav-item">
+            <a href="<%= url_for('archives/') %>">
+                <% if(theme.sidebar.archives.icon) { %>
+                    <i class="icon material-icons sidebar-icons"><%= theme.sidebar.archives.icon %></i>
+                <% } %>
+            <%= __('sidebar.archives') %>
+            </a>
+        </li>
+        <% if(theme.sidebar.archives.divider === true) { %>
+            <div class="divider"></div>
+        <% } %>
+    <% } %>
+
     <!-- Search -->
     <!--<% if(theme.search.use) { %>
         <li class="nav-item">
