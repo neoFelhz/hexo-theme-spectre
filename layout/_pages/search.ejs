@@ -106,14 +106,14 @@
                         str += '</div></div>'
                         str += '<div class="divider pt-1"></div>';
                         position++;
-                    } else {
+                    }/* else {
                         str = '<span>没有找到任何结果，请更换关键字试试~</span>';
                         str += '<br>';
                         str += '<span>或者你可以去 Google 上试试：</span>'
                         str += '<a href="https://www.google.com/search?&q=' + keywords + '%20site:blog.nfz.moe" target="_blank">' + keywords + '&nbsp;site:blog.nfz.moe</a>'
                         str += '<br><br><br><br><br><br>'
                         position++;
-                    }
+                    }*/
                 });
                 $resultContent.innerHTML = str;
             }
