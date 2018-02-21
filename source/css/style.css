@@ -48,9 +48,15 @@ code {
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 960px) {
     .container-header {
         padding-top: 1.8rem;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 481px) {
+    .container-header {
+        padding-top: 5.5rem;
     }
 }
 
@@ -248,7 +254,6 @@ code {
     }
 }
 
-
 .link-list {
     text-align: center;
     padding: 0;
@@ -261,11 +266,13 @@ code {
         max-width: 32rem;
     }
 }
+
 @media screen and (min-width: 1264px) {
     .link-list {
         max-width: 48rem;
     }
 }
+
 @media screen and (min-width: 1584px) {
     .link-list {
         max-width: 64rem;
@@ -306,7 +313,26 @@ code {
 
 .container-links img {
     vertical-align: middle;
-    height:72px;
+    height: 72px;
+}
+
+
+/*============* * Search */
+
+.container-search {
+    padding: 4rem 1.2rem 2rem;
+}
+
+@media (max-width: 959px) and (min-width: 480px) {
+    .container-search {
+        padding: 4rem 3rem
+    }
+}
+
+@media (min-width: 960px) {
+    .container-search {
+        padding: 2rem 4rem 2rem
+    }
 }
 
 
@@ -322,6 +348,23 @@ code {
 
 .btn-gray {
     color: rgb(117, 117, 117)!important;
+}
+
+html *::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+}
+
+@media (min-width: 1024px) {
+    html *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+html *::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .2);
 }
 
 
@@ -341,6 +384,10 @@ code {
 #sidebar-content {
     min-width: 14rem;
     width: 14rem;
+}
+
+#sidebar-content .nav {
+    margin-bottom: 6rem;
 }
 
 #sidebar-content {
@@ -406,6 +453,10 @@ code {
 
 #sidebar-content .divider {
     margin: .4rem .6rem;
+}
+
+#sidebar .sidebar-footer-image {
+    padding: .5rem
 }
 
 .sidebar-badge {

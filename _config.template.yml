@@ -60,10 +60,6 @@ img:
   logo: "/img/logo.png"
   avatar: "/img/avatar.png"
   sidebar_header: "/img/sidebar_header.png"
-  sidebar_footer:
-    #upyun_logo:
-      #link: "https://www.upyun.com/"
-      #src: "/img/upyun_logo.svg"
 
   daily_pic:
     # Available value: custom | bing
@@ -188,8 +184,9 @@ sidebar:
     use: false
     divider: false
   footer:
-    divider: true
-    theme: true
+      #upyun_logo:
+        #link: "https://www.upyun.com/"
+        #src: "/img/upyun_logo.svg"
 
 
 # ---------------------------------------------------------------
