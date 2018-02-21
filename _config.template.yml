@@ -15,10 +15,6 @@ head:
 # Style Settings
 # ---------------------------------------------------------------
 
-# Schemes
-scheme: Paradox
-#scheme: Isolation
-
 # Theme Color
 color:
   android_chrome_color: "#0097A7"
