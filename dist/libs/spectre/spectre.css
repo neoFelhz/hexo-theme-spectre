@@ -1,4 +1,4 @@
-/*! Spectre.css v0.5.0 | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css v0.5.1 | MIT License | github.com/picturepan2/spectre */
 /* Manually forked from Normalize.css */
 /* normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /** 1. Change the default font family in all browsers (opinionated). 2. Correct the line height in all browsers. 3. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
@@ -501,7 +501,7 @@ dl dd {
 .table {
   border-collapse: collapse;
   border-spacing: 0;
-  text-align: left;
+  text-align: left; 
   width: 100%;
 }
 
@@ -614,9 +614,7 @@ dl dd {
   color: #fff;
 }
 
-.btn.btn-primary.loading::after,
-.btn.btn-success.loading::after,
-.btn.btn-error.loading::after {
+.btn.btn-primary.loading::after {
   border-bottom-color: #fff;
   border-left-color: #fff;
 }
@@ -645,6 +643,11 @@ dl dd {
   color: #fff;
 }
 
+.btn.btn-success.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+}
+
 .btn.btn-error {
   background: #e85600;
   border-color: #d95000;
@@ -667,6 +670,11 @@ dl dd {
   background: #c44900;
   border-color: #b54300;
   color: #fff;
+}
+
+.btn.btn-error.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
 }
 
 .btn.btn-link {
@@ -844,6 +852,10 @@ legend {
   color: #acb3c2;
 }
 
+.form-input::-ms-input-placeholder {
+  color: #acb3c2;
+}
+
 .form-input::placeholder {
   color: #acb3c2;
 }
@@ -955,6 +967,7 @@ textarea.form-input {
   top: 50%;
   transform: translateY(-50%);
   width: .8rem;
+  z-index: 2;
 }
 
 .has-icon-left .form-icon {
@@ -1309,8 +1322,10 @@ input.disabled + .form-icon {
 }
 
 .form-horizontal .form-group {
-  display: flex; 
+  display: flex;
   display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .label {
@@ -1977,46 +1992,6 @@ summary.accordion-header::-webkit-details-marker {
   display: none;
 }
 
-.form-autocomplete {
-  position: relative;
-}
-
-.form-autocomplete .form-autocomplete-input {
-  align-content: flex-start;
-  display: flex;
-  display: -ms-flexbox;
-  -ms-flex-line-pack: start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: auto;
-  min-height: 1.6rem;
-  padding: .1rem;
-}
-
-.form-autocomplete .form-autocomplete-input.is-focused {
-  border-color: #5755d9; 
-  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
-}
-
-.form-autocomplete .form-autocomplete-input .form-input {
-  border-color: transparent;
-  box-shadow: none;
-  display: inline-block;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  height: 1.2rem;
-  line-height: .8rem;
-  margin: .1rem;
-  width: auto;
-}
-
-.form-autocomplete .menu {
-  left: 0;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-}
-
 .avatar {
   background: #5755d9;
   border-radius: 50%;
@@ -2397,7 +2372,7 @@ summary.accordion-header::-webkit-details-marker {
   min-width: 180px;
   padding: .4rem;
   transform: translateY(.2rem);
-  z-index: 100;
+  z-index: 300;
 }
 
 .menu.menu-nav {
@@ -2434,6 +2409,12 @@ summary.accordion-header::-webkit-details-marker {
 .menu .menu-item > a.active {
   background: #f1f1fc;
   color: #5755d9;
+}
+
+.menu .menu-item .form-checkbox,
+.menu .menu-item .form-radio,
+.menu .menu-item .form-switch {
+  margin: .1rem 0;
 }
 
 .menu .menu-item + .menu-item {
@@ -2513,7 +2494,6 @@ summary.accordion-header::-webkit-details-marker {
   box-shadow: 0 .2rem .5rem rgba(69, 77, 93, .3);
   display: block;
   padding: 0 .8rem;
-  text-align: left;
 }
 
 .modal-container .modal-header {
@@ -2669,7 +2649,7 @@ summary.accordion-header::-webkit-details-marker {
   transform: translate(-50%, -50%) scale(0);
   transition: transform .2s ease;
   width: 320px;
-  z-index: 400;
+  z-index: 300;
 }
 
 .popover *:focus + .popover-container,

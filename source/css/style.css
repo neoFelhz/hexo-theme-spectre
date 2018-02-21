@@ -320,7 +320,7 @@ code {
 /*============* * Search */
 
 .container-search {
-    padding: 4rem 1.2rem 2rem;
+    padding: 5rem 1.2rem 3rem;
 }
 
 @media (max-width: 959px) and (min-width: 480px) {
@@ -331,8 +331,24 @@ code {
 
 @media (min-width: 960px) {
     .container-search {
-        padding: 2rem 4rem 2rem
+        padding: 2rem 4rem 4rem
     }
+}
+
+.container-search .search-output {
+    margin-top: 1rem;
+}
+
+.container-search .search-output .tile-title {
+    color: #50596c;
+}
+
+.container-search .search-output .tile-content a:hover {
+    color: #50596c;
+}
+
+.container-search .search-output .tile-content p {
+    max-height: 3rem
 }
 
 
