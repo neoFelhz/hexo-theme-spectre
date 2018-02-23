@@ -1,10 +1,22 @@
 <head>
     <meta charset="utf-8">
     <!--
-        © Neko Dev
-        GitHub: https://github.com/viosey/hexo-theme-material
+        © neoFelhz
+        GitHub: https://github.com/neoFelhz/hexo-theme-spectre
         Version: <%= theme.verison %>
     -->
+    <script>
+        window.materialVersion = "<%= theme.verison %>",
+        window.oldVersion = [
+            <% if(theme.old_verison) { %>
+                <% if(Array.isArray(theme.old_verison)) { %>
+                    "<%- theme.old_verison.join('\",\"') %>"
+                <% } else { %>
+                    "<%- theme.old_verison %>"
+                <% } %>
+            <% } %>
+        ]
+    </script>
 
     <!-- DNS Prefetch -->
     <%- partial('_partial/head/dns-prefetch') %>
@@ -13,7 +25,7 @@
     <%- partial('_partial/head/meta') %>
 
     <!-- Import File -->
-    <%- partial('_partial/source/head') %>
+    <%- partial('_source/head') %>
 
     <!-- Site Verification -->
     <%- partial('_partial/head/site-verification') %>
@@ -37,6 +49,9 @@
 
     <!-- Canonical link -->
     <link rel="canonical" href="<%= config.url + url_for(page.path).replace('index.html', '') %>">
+
+    <!-- Structured Data -->
+    <%- partial('_partial/head/structured-data') %>
 
     <!-- Custom Head -->
 

@@ -1,19 +1,36 @@
 <!-- Import JS -->
+<script>lsloader.js("lazy_js","/libs/js/lazyload.min.js")</script>
 
-<!-- MathJax -->
-<% if (page.mathjax) { %>
-    <%- partial('_plugin/mathjax') %>
-<% } %>
+<!-- Comment -->
+<% if(theme.comment.use){ %>
+    <%- partial('_plugin/comment/' + theme.comment.use + '/common') %>
+ <% } %>
 
-<!-- Prettify -->
-<% if (theme.prettify.enable){ %>
-    <%- partial('_plugin/highlight/prettify') %>
-<% } %>
-
-<!-- Hanabi -->
-<% if (theme.hanabi.enable) { %>
-    <%- partial('_plugin/highlight/hanabi') %>
-<% } %>
+<script type="text/ls-javascript" id="lazy-load">
+    var myLazyLoad = new LazyLoad({
+        elements_selector: ".lazy"
+    });
+    // Start Queue
+    window.onload = function() {
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    };
+</script>
+<script type="text/javascript">
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+    <% if (theme.footer.copyright_since) { %>
+        copyrightSince = <%= theme.footer.copyright_since %>;
+            if (copyrightSince === copyrightNow) {
+            textContent.textContent = copyrightNow
+        } else {
+            textContent.textContent = copyrightSince + ' - ' + copyrightNow
+        }
+    <% } else { %>
+        textContent.textContent = copyrightNow
+    <% } %>
+</script>
 
 <!-- Console log -->
 <%- partial('_widget/console_runjs') %>
