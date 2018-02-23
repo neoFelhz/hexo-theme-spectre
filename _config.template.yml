@@ -33,8 +33,7 @@ url:
 img:
   logo: "/img/logo.png"
   avatar: "/img/avatar.png"
-  daily_pic: "/img/daily_pic.png"
-
+  daily_pic: "/img/daily_pic.png"#
 
 # Slogan (will show at daily_pic)
 slogan: "Hi, nice to meet you"
@@ -94,35 +93,23 @@ footer:
 
 # SNS Share Switch
 sns_share:
-    twitter: true
-    facebook: true
-    googleplus: true
-    weibo: true
-    linkedin: false
-    qq: false
-    telegram: false
+  twitter: true
+  facebook: true
+  googleplus: true
+  weibo: true
+  linkedin: false
+  qq: false
+  telegram: false
 
 # Sidebar Customize
 sidebar:
-  dropdown:
-    Email Me:
-      link: "#"
-      icon: email
   homepage:
     use: true
     icon: home
     divider: false
-  search:
-      use: true
-      icon: search
-      divider: false
   archives:
     use: true
     icon: inbox
-    divider: false
-  categories:
-    use: false
-    icon: chrome_reader_mode
     divider: false
   pages:
     #About:
@@ -137,9 +124,9 @@ sidebar:
     use: false
     divider: false
   footer:
-      #upyun_logo:
-        #link: "https://www.upyun.com/"
-        #src: "/img/upyun_logo.svg"
+    #upyun_logo:
+      #link: "https://www.upyun.com/"
+      #src: "/img/upyun_logo.svg"
 
 
 # ---------------------------------------------------------------
@@ -172,6 +159,11 @@ analytics:
   google_site_id:
   baidu_site_id:
   cnzz_site_id:
+
+# Search Systems
+search:
+  use: false # true || false
+  link: 
 
 # ---------------------------------------------------------------
 # Do Not Edit Below This Line, unless you know what you are doing!

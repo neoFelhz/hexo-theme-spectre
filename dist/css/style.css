@@ -1,7 +1,12 @@
 /*============* * Index */
 
+html {
+    display: block;
+}
+
 body {
     background: #f8f9fa;
+    display: block;
 }
 
 code {
@@ -360,7 +365,6 @@ code {
 }
 
 
-
 /*============* * Utilities */
 
 #disqus_thread a {
@@ -390,6 +394,17 @@ html *::-webkit-scrollbar {
 
 html *::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, .2);
+}
+
+.valign {
+    display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -webkit-box-align: center!important;
+    -webkit-align-items: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
 }
 
 
@@ -554,24 +569,42 @@ html *::-webkit-scrollbar-thumb {
     padding: 1rem;
 }
 
-.post-card .card-header-info {
-    min-height: 2.4rem;
-    display: flex;
-    box-sizing: border-box;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.post-card .card-header-info .avatar {
-    margin-right: .6rem;
-    height: 2.2rem!important;
-    width: 2.2rem!important;
-}
-
 .post-footer-info {
+    position: relative;
+    margin: 3rem 0 0;
     padding: 1rem;
+    border-top: #EBF2F6 1px solid;
+}
+
+.post-footer-info .avatar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: .2rem;
+    background: #f8f9fa;
+    ;
+    z-index: 2;
+    box-shadow: #E7EEF2 0 0 0 1px;
+}
+
+.post-footer-info .post-footer-date {
+    margin-right: 7rem
+}
+
+.post-footer-info .post-footer-action {
+    position: absolute;
+    top: 1rem;
+    right: .5rem;
+    width: 5rem;
 }
 
 .post-card .post-btn-list {

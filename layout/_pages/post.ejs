@@ -10,23 +10,25 @@
                 <div class="card-title h4"><%= page.title %></div>
             </div>
             <div class="divider"></div>
-            <div class="card-header-info">
-                <figure class="avatar">
-                    <img src="<%= theme.img.avatar %>">
-                </figure>
-                <div>
-                    <div class="card-subtitle"><strong><%= config.author %></strong></div>
-                    <div class="card-subtitle text-gray"><%= date(page.date, config.date_format) %></div>
-                </div>
-                <div style="flex-grow: 1;"></div>
-                <div>
-                <!-- Post Share -->
-                <%- partial('_partial/menu/post-share') %>
-                <!-- Post Qrcoe -->
-                <% if(theme.post.qrcode.enable === true) { %>
-                    <%- partial('_partial/menu/post-qrcode') %>
+            <div>
+                <!-- Category -->
+                <% if (page.categories && page.categories.length) { %>
+                    <%- list_categories(page.categories, {
+                        show_count: false,
+                        class: 'post-categories',
+                        style: 'list',
+                        separator: ''
+                    }) %>
                 <% } %>
-                </div>
+                <!-- Post Tags -->
+                <% if (page.tags && page.tags.length) { %>
+                    <%- list_tags(page.tags, {
+                        show_count: false,
+                        class: 'post-tags',
+                        style: 'list',
+                        separator: ''
+                    }) %>
+                <% } %>
             </div>
         </div>
         <br>
@@ -35,7 +37,7 @@
             <%- partial('_partial/post-license') %>
         </div>
         <div class="post-footer-info bg-gray">
-        <%- partial('_partial/post/footer-info') %>
+            <%- partial('_partial/post/footer-info') %>
         </div>
         <div class="divider m-0"></div>
         <%- partial('_partial/post/nav') %>
@@ -45,13 +47,5 @@
             </div>
         <% } %>
     </div>
-
-    <!--<% var toc_obj = toc(page.content, {
-        class: 'post-toc',
-        list_number: theme.post.toc.linenumber || false,
-    }) %>
-    <div class="card post-tos">
-        <%- toc_obj %>
-    </div>-->
 
 </div>
