@@ -1,7 +1,7 @@
 {
   "name": "hexo-spectre",
-  "version": "0.0.1",
-  "description": "Elegant Theme for Hexo",
+  "version": "0.1.1",
+  "description": "A modern, simple & elegant theme for Hexo",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "setup": "npm cache clean && npm install",
@@ -24,7 +24,4 @@
     "gulp-uglify": "^3.0.0",
     "sass-lint": "^1.10.2"
   },
-  "dependencies": {
-    "hexo-prism-plugin": "^2.2.0"
-  }
 }

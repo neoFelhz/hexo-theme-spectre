@@ -407,6 +407,10 @@ html *::-webkit-scrollbar-thumb {
     align-items: center!important;
 }
 
+.card {
+    border: unset!important;
+}
+
 
 /*============* * Sidebar */
 
@@ -582,16 +586,15 @@ html *::-webkit-scrollbar-thumb {
     box-sizing: border-box;
     display: block;
     position: absolute;
-    top: -40px;
+    top: -1.5rem;
     left: 50%;
     margin-left: -40px;
-    width: 80px;
-    height: 80px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     overflow: hidden;
     padding: .2rem;
     background: #f8f9fa;
-    ;
     z-index: 2;
     box-shadow: #E7EEF2 0 0 0 1px;
 }
@@ -602,13 +605,25 @@ html *::-webkit-scrollbar-thumb {
 
 .post-footer-info .post-footer-action {
     position: absolute;
-    top: 1rem;
+    top: calc(.6rem + (100% - 2rem - 1.2rem)/2);
     right: .5rem;
     width: 5rem;
 }
 
-.post-card .post-btn-list {
-    background-color: #f5f5f5;
+@media (max-width: 500px) {
+    .post-footer-info {
+        padding: 2.2rem 1rem 1rem;
+    }
+    .post-footer-info .avatar {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+    .post-footer-date {
+        font-size: 85%;
+    }
+    .post-footer-info .post-footer-action {
+        top: calc(1.8rem + (100% - 3.2rem - 1.2rem)/2);
+    }
 }
 
 .post-tags-list,
