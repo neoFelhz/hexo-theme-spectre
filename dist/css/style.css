@@ -407,6 +407,10 @@ html *::-webkit-scrollbar-thumb {
     align-items: center!important;
 }
 
+.card {
+    border: unset!important;
+}
+
 
 /*============* * Sidebar */
 
