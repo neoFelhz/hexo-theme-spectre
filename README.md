@@ -1,9 +1,9 @@
 <h1 align="center">Spectre Theme</h1>
 
-<h3 align="center">Modern, Simple & Elegant | 现代，简洁，优雅</h1>
+<h4 align="center">Modern, Simple & Elegant | 现代，简洁，优雅</h1>
 
 <p align="center">
-<img alt="Version" src="https://img.shields.io/badge/version-0.1.0-757575.svg?style=flat-square"/>
+<img alt="Version" src="https://img.shields.io/badge/version-0.1.1-757575.svg?style=flat-square"/>
 <a href="https://nfz.moe"><img alt="Author" src="https://img.shields.io/badge/author-neoFelhz-444444.svg?style=flat-square"/></a>
 <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/></a>
 <a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-7.0+-43853d.svg?style=flat-square"/></a>
@@ -14,7 +14,7 @@
 ## Introduction 介绍
 
 A Modern, Simple & Elegant Theme for Hexo.  
-优雅、纯粹、质感的 Hexo 主题。
+现代、简洁、优雅的 Hexo 主题。
 
 ## Demo 演示
 
@@ -22,8 +22,8 @@ A Modern, Simple & Elegant Theme for Hexo.
 
 ## Download 下载
 
-注意！当前主题仍在开发中，部分功能还没有完善！  
-ATTENTION! Spectre Theme is still under development!
+**注意！当前主题仍在开发中，部分功能还没有完善！**  
+**ATTENTION! Spectre Theme is still under development!**
 
 #### [Download latest version](https://github.com/neoFelhz/hexo-theme-spectre/releases/latest)
 
@@ -80,3 +80,5 @@ Open sourced under the GPL v3.0 license.
 Thanks jsDelivr for providing Public CDN service.
 
 > **jsDelivr** – Open Source CDN, free, fast, and reliable. You can choose the files from GitHub or NPM and serve them using jsDelivr.
+
+`https://cdn.jsdelivr.net/gh/neofelhz/hexo-theme-spectre/source/`

@@ -168,7 +168,6 @@ search:
 # ---------------------------------------------------------------
 # Do Not Edit Below This Line, unless you know what you are doing!
 # ---------------------------------------------------------------
-verison:
+verison: 0.1.1
 old_verison:
-  - 1.4.0
-  - 1.5.0
+  - 0.1.0
